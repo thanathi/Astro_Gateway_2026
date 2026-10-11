@@ -35,7 +35,7 @@ XSL/ — สเปกตรัมดาวฤกษ์ (X-shooter Spectral Libra
 SDSS/ — สเปกตรัมกาแล็กซี (Sloan Digital Sky Survey DR17)
 --------------------------------------------------------
   spec-0531-52028-0573.fits   SDSS J140102.07+025242.5   กาแล็กซี starburst  z = 0.25196   (โน้ตบุ๊ก 02)
-  spec-0394-51913-0075.fits   SDSS J005527.46−002148.8   กาแล็กซี starburst  z = 0.16742   (ภารกิจ 2)
+  spec-0394-51913-0075.fits   SDSS J005527.46−002148.8   กาแล็กซี starburst  z = 0.16742   (ภารกิจเดิม — ไม่ได้ใช้แล้ว)
 
 ที่มา: dr17.sdss.org/sas/dr17/sdss/spectro/redux/26/spectra/lite/<plate>/
 
@@ -63,14 +63,25 @@ Cepheid/ — ดาวเซเฟอิดในเมฆแมเจลแล�
       ทุกดวงเป็นเซเฟอิดแบบ fundamental mode (F)
 
 
-TESS/ — ดาวคู่อุปราคา TIC 393636596 (ภารกิจ 4)
-----------------------------------------------
-  tess2020106103520-s0024-0000000393636596-0180-s_lc.fits
-      TESS sector 24 ทุก 2 นาที · คาบ 0.8794 วัน
-      ที่มา: MAST  mast:TESS/product/...
+TESS/ — กราฟแสง TESS ทุก 2 นาที (SPOC, PDCSAP) — โน้ตบุ๊ก 03 ส่วน B และภารกิจ (โน้ตบุ๊ก 04)
+--------------------------------------------------------------------------------
+  ไฟล์ชื่อ tess<เวลา>-s<sector>-<TIC 16 หลัก>-<รุ่น>-s_lc.fits · 1 sector ต่อดาว ดาวน์โหลดจาก MAST เมื่อ 11 ต.ค. 2569
+  (โน้ตบุ๊กดาวน์โหลดเองจาก mast.stsci.edu/api/v0.1/Download/file?uri=mast:TESS/product/<ชื่อไฟล์> ถ้าไม่มีไฟล์ในโฟลเดอร์นี้)
+  ตัวอย่างโน้ตบุ๊ก 03: HD 209458 b (TIC 420814525, sector 56)
+  ภารกิจ (17 ดวง): WASP-17 b, WASP-121 b, WASP-12 b, WASP-19 b, WASP-18 b, HD 189733 b, WASP-43 b, WASP-80 b, WASP-126 b, GJ 436 b, GJ 3470 b, TOI-849 b, TOI-270 c, pi Men c, LHS 3844 b, GJ 1132 b, LTT 1445 A b
+  ภารกิจท้าทาย: TOI-4597.01, TOI-1717.01, TOI-1951.01 (ผู้สมัครดาวเคราะห์ TFOPWG = PC)
+      และ TIC 393636596 sector 24 — ดาวคู่อุปราคา คาบ 0.8792 วัน (ตัวอย่างสัญญาณที่ไม่ใช่ดาวเคราะห์)
+  รายชื่อ TIC, sector และค่าที่ตีพิมพ์ของทุกดวงอยู่ใน Lectures/_build/exoplanets.py (ค่าจาก NASA Exoplanet Archive)
 
 
-K2/ — ดาวเคราะห์ K2-24 (โน้ตบุ๊ก 03 ส่วน B)
+Exoplanets/ — รายชื่อดาวเคราะห์ผ่านหน้าที่ยืนยันแล้ว (โน้ตบุ๊ก 04 ขั้น M6)
+--------------------------------------------------------------------------------
+  confirmed_transiting_planets.csv
+      4,780 ดวง จาก NASA Exoplanet Archive ตาราง pscomppars (discoverymethod = Transit, มีคาบและรัศมี) ดึงเมื่อ 11 ต.ค. 2569
+      คอลัมน์: pl_name, pl_orbper (วัน), pl_rade (รัศมีโลก), pl_bmasse (มวลโลก), disc_facility, disc_year
+
+
+K2/ — ดาวเคราะห์ K2-24 (โน้ตบุ๊ก 03 ส่วน B เดิม — ตอนนี้ใช้ HD 209458 b จาก TESS แทน)
 -----------------------------------------
   hlsp_everest_k2_llc_203771098-c02_kepler_v2.0_lc.fits
       K2-24 (EPIC 203771098) กราฟแสง K2 campaign 2 ทุก 30 นาที (EVEREST v2)
@@ -91,7 +102,7 @@ Stars/ — ลำดับดาวแคระมาตรฐาน: ชนิ�
       สี BP−RP ของดาว XSL 3 ดวงในโน้ตบุ๊กจาก Gaia DR3 (VizieR I/355/gaiadr3)
 
 
-Isochrones/ — ไอโซโครน PARSEC สำหรับหาอายุกระจุกดาว (โน้ตบุ๊ก 01 ส่วน 7.1, ข้อ 8, ภารกิจ 1)
+Isochrones/ — ไอโซโครน PARSEC สำหรับหาอายุกระจุกดาว (โน้ตบุ๊ก 01 ส่วน 7.1 และข้อ 8)
 --------------------------------------------------------------------------------
   parsec_gaia_dr3.csv
       แบบจำลอง PARSEC v1.2S (Bressan et al. 2012) แถบ Gaia EDR3/DR3 (Vega mag) · IMF Kroupa · ไม่มีฝุ่น (A_V = 0)
