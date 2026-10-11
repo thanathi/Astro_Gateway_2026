@@ -39,6 +39,14 @@ SDSS/ — สเปกตรัมกาแล็กซี (Sloan Digital Sky Su
 
 ที่มา: dr17.sdss.org/sas/dr17/sdss/spectro/redux/26/spectra/lite/<plate>/
 
+SDSS/class/ — กาแล็กซีกำเนิดดาว 54 แห่งสำหรับกิจกรรมทั้งห้อง (โน้ตบุ๊ก 02 ขั้น B5: วัดค่าคงที่ฮับเบิล)
+  spec-<plate>-<mjd>-<fiber>.fits  สเปกตรัม SDSS DR17 แบบ lite (36 แห่งจาก SDSS-I/II, 18 แห่งจาก BOSS) · 0.023 < z < 0.145
+      ทุกแห่งเป็นกาแล็กซีกำเนิดดาว (SDSS subClass STARFORMING/STARBURST, zWarning = 0) ที่มีเส้นเปล่งแสงชัด
+      และเคยมีซูเปอร์โนวาชนิด Ia ในแค็ตตาล็อก Pantheon+ (Scolnic et al. 2022) — หมายเลข 1–54 เรียงตาม z
+      ที่มา: SkyServer SQL (skyserver.sdss.org/dr17/SkyServerWS/SearchTools/SqlSearch) + data.sdss.org/sas/dr17/
+             ดึงเมื่อ 11 ต.ค. 2569 ด้วย _build/fetch_galaxies.py · ความสว่างซูเปอร์โนวาอยู่ในโน้ตบุ๊ก (CLASS_GALAXIES)
+      เฉลย (z ของ SDSS, ระยะทาง, H₀ รายแห่ง) อยู่ที่ _build/galaxy_class.csv ไม่ได้ใส่ใน Data/
+
 
 Cepheid/ — ดาวเซเฟอิดในเมฆแมเจลแลนใหญ่ (LMC)
 ---------------------------------------------
